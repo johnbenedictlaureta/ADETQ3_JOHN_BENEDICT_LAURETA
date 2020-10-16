@@ -6,6 +6,55 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+
+        .container {
+            text-transform: uppercase;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        .home {
+            color: white;
+            text-align: center;
+            background: #525252
+        }
+
+        .forbg {
+            height: 60px;
+        }
+
+        div .bg {
+            background: #eceed2;
+            text-align: center;
+        }
+
+        .bg ul {
+            list-style: none;
+        }
+
+        .bg li {
+            text-transform: uppercase;
+        }
+
+        footer {
+            height: 430px;
+        }
+
+        .bgOnly {
+            height: 390px;
+        }
+
+        .fbottom {
+            background: #e4e1c7;
+            text-align: center;
+            height: 40px;
+            padding-top: 10px;
+            width: 100%;
+            text-transform: lowercase;
+        }
+    </style>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,13 +65,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("ADETQ3", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
                 </ul>
             </div>
         </div>
@@ -31,7 +80,12 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="bgOnly">
+            </div>
+
+            <div class="fbottom">
+                <p>&copy; @DateTime.Now.Year - Benedict.AppDev</p>
+            </div>
         </footer>
     </div>
 
